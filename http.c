@@ -5020,5 +5020,6 @@ evhttp_uri_set_fragment(struct evhttp_uri *uri, const char *fragment)
 	if (fragment && end_of_cpath(fragment, PART_FRAGMENT, uri->flags) != fragment+strlen(fragment))
 		return -1;
 	URI_SET_STR_(fragment);
+
 	return 0;
 }
